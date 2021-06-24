@@ -1,0 +1,18 @@
+<html>
+  <head></head>
+  <body>
+    <button>Get GeoLocation</button><br /><br />
+    <h1 id="message"></h1>
+    <script>
+      var btn = document.querySelector("button");
+      btn.onclick = function () {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(postMessage);
+        } else {
+          document.getElementById("message").innerHTML =
+            "GeoLocation is not supported in this browser";
+        }
+      };
+    </script>
+  </body>
+</html>
