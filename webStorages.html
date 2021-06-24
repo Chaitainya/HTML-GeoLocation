@@ -1,0 +1,15 @@
+<html>
+  <head> </head>
+  <body>
+    <div id="result"></div>
+  </body>
+  <script>
+    var result = document.getElementById("result");
+    if (typeof Storage !== "undefined") {
+      localStorage.setItem("lastName", "Smith");
+      result.innerHTML = localStorage.getItem("lastName");
+    } else {
+      result.innerHTML = "Browser doesn't support";
+    }
+  </script>
+</html>
