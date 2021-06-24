@@ -7,7 +7,7 @@
       var btn = document.querySelector("button");
       btn.onclick = function () {
         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(postMessage);
+          navigator.geolocation.getCurrentPosition(postMessage); // print or postMessage or showLocation(but lasttime showLocation is't worked)
         } else {
           document.getElementById("message").innerHTML =
             "GeoLocation is not supported in this browser";
